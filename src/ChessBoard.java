@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ChessBoard extends JPanel {
-    public ChessPiece[][] board = new ChessPiece[8][8]; // creating a field for game
+    public ChessPiece[][] board = new ChessPiece[8][8];
     String nowPlayer;
     int tileSize = 80;
     ChessPiece selectedPiece;

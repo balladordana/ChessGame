@@ -17,16 +17,15 @@ public class Queen extends ChessPiece{
             return false;
         }
 
-        // Проверка, что конь не пытается остаться на месте
         if (this.line == toLine && this.col == toColumn) {
-            return false; //вернуть инфо что конь должен двигаться
+            return false;
         }
 
         if (Math.abs(toLine - this.line) == Math.abs(toColumn - this.col) || toColumn == this.col || toLine == this.line){
-            return !chessBoard.isOccupiedByOwnPiece(toLine, toColumn); // Конь может сделать этот ход
+            return !chessBoard.isOccupiedByOwnPiece(toLine, toColumn);
         }
 
-        return false; // Конь не может сделать этот ход
+        return false;
     }
 
     @Override

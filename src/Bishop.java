@@ -14,21 +14,19 @@ public class Bishop extends ChessPiece{
     }
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard,  int toLine, int toColumn){
-        // Проверка, что конечные координаты находятся в пределах доски
         if (toLine < 0 || toLine >= 8 || toColumn < 0 || toColumn >= 8) {
-            return false; //вернуть инфо что неправильно выбраны точки
+            return false;
         }
 
-        // Проверка, что конь не пытается остаться на месте
         if (this.line == toLine && this.col == toColumn) {
-            return false; //вернуть инфо что конь должен двигаться
+            return false;
         }
 
         if (Math.abs(toLine - this.line) == Math.abs(toColumn - this.col)){
-            return !chessBoard.isOccupiedByOwnPiece(toLine, toColumn); // Конь может сделать этот ход
+            return !chessBoard.isOccupiedByOwnPiece(toLine, toColumn);
         }
 
-        return false; // Конь не может сделать этот ход
+        return false;
     }
     @Override
     public boolean moveCollidesWithPieces(ChessBoard chessBoard, int col, int line) {

@@ -1,7 +1,6 @@
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.HashSet;
 
 public class Horse extends ChessPiece{
     public Horse(String color, int col, int line) {
